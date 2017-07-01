@@ -1,12 +1,9 @@
 <!doctype html>
 
-<html lang="en" ng-app>
+<html lang="en" ng-app="app">
     <meta charset="utf-8">
 
     <title>MyCah Pleasant - Technology Enthusiast</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/controllers/index.js"></script>
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css" />
@@ -70,7 +67,7 @@
             </div>
         </div>
     </section>
-    <section class="hero is-success">
+    <section class="hero is-primary">
         <div class="hero-body">
             <div class="container">
                 <div class="columns">
@@ -78,10 +75,161 @@
                         <p class="title">Skills</h3>
                     </div>
                     <div class="column">
-                        {{index.chosenSkill}}
+                        <div class="tabs is-toggle is-centered">
+                            <ul>
+                                <li ng-class="{'is-active': index.chosenSkill == 'javascript'}"><a ng-click="index.chosenSkill = 'javascript'">JavaScript</a></li>
+                                <li ng-class="{'is-active': index.chosenSkill == 'python'}"><a ng-click="index.chosenSkill = 'python'">Python</a></li>
+                                <li ng-class="{'is-active': index.chosenSkill == 'html'}"><a ng-click="index.chosenSkill = 'html'">HTML and CSS</a></li>
+                                <li ng-class="{'is-active': index.chosenSkill == 'other'}"><a ng-click="index.chosenSkill = 'other'">Other</a></li>
+                            </ul>
+                        </div>
+                        <div id="skills">
+                            <div class="level is-mobile">
+                                <div class="level-left">Familiar</div>
+                                <div class="level-item"><i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
+                                <div class="level-item">Proficient</div>
+                                <div class="level-item"><i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
+                                <div class="level-right">Skilled</div>
+                            </div>
+                            <div ng-if="index.chosenSkill == 'javascript'">
+                                <div class="has-text-centered">
+                                    Vanilla
+                                    <progress class="progress is-info" value="95" max="100">95</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    jQuery
+                                    <progress class="progress is-info" value="90" max="100">80</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    AngularJS
+                                    <progress class="progress is-info" value="80" max="100">80</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    Vue.js
+                                    <progress class="progress is-info" value="70" max="100">70</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    Node.js and npm
+                                    <progress class="progress is-info" value="55" max="100">55</progress>
+                                </div>
+                            </div>
+                            <div ng-if="index.chosenSkill == 'python'">
+                                <div class="has-text-centered">
+                                    Basic
+                                    <progress class="progress is-info" value="95" max="100">95</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    Flask
+                                    <progress class="progress is-info" value="90" max="100">90</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    SQLAlchemy
+                                    <progress class="progress is-info" value="80" max="100">80</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    Falcon
+                                    <progress class="progress is-info" value="60" max="100">60</progress>
+                                </div>
+                                <br />
+                            </div>
+                            <div ng-if="index.chosenSkill == 'html'">
+                                <div class="has-text-centered">
+                                    HTML5
+                                    <progress class="progress is-info" value="95" max="100">95</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    CSS3
+                                    <progress class="progress is-info" value="85" max="100">85</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    Responsive Design
+                                    <progress class="progress is-info" value="80" max="100">80</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    Sass/Less
+                                    <progress class="progress is-info" value="80" max="100">80</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    Bootstrap
+                                    <progress class="progress is-info" value="80" max="100">80</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    Angular Material
+                                    <progress class="progress is-info" value="80" max="100">80</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    Bulma
+                                    <progress class="progress is-info" value="75" max="100">75</progress>
+                                </div>
+                                <br />
+                            </div>
+                            <div ng-if="index.chosenSkill == 'other'">
+                                <div class="has-text-centered">
+                                    MySQL
+                                    <progress class="progress is-info" value="90" max="100">95</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    Apache/nginx
+                                    <progress class="progress is-info" value="85" max="100">85</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    Linux
+                                    <progress class="progress is-info" value="85" max="100">85</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    Git
+                                    <progress class="progress is-info" value="85" max="100">85</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    PHP
+                                    <progress class="progress is-info" value="85" max="100">85</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    Java
+                                    <progress class="progress is-info" value="70" max="100">70</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    C/C++
+                                    <progress class="progress is-info" value="60" max="100">60</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    C#
+                                    <progress class="progress is-info" value="60" max="100">60</progress>
+                                </div>
+                                <br />
+                                <div class="has-text-centered">
+                                    MongoDB
+                                    <progress class="progress is-info" value="60" max="100">60</progress>
+                                </div>
+                                <br />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/index.js"></script>
 </body>
