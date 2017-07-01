@@ -1,0 +1,15 @@
+$red: #C0392B;
+$purple: #674172;
+$blue: #2574A9;
+$turquoise: #2ABB9B;
+$green: #87D37C;
+$yellow: #F5D76E;
+$orange: #EB9532;
+
+
+@import "bulma.sass";
+
+.center-title {
+    top: 50%;
+    position: relative;
+}
