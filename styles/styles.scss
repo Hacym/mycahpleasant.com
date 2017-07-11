@@ -1,8 +1,8 @@
 $red: #C0392B;
 $purple: #674172;
 $blue: #2574A9;
-$turquoise: #2ABB9B;
-$green: #87D37C;
+$turquoise: #53a1a3;
+$green: #34495E;
 $yellow: #F5D76E;
 $orange: #EB9532;
 
@@ -12,4 +12,16 @@ $orange: #EB9532;
 .center-title {
     top: 50%;
     position: relative;
+}
+
+#posts a {
+    text-decoration: underline;
+}
+
+#posts a:link {
+    color: $blue;
+}
+
+#posts a:visited {
+    color: $purple;
 }

@@ -11,8 +11,8 @@ function IndexController($http) {
         clientSecret: "cd0ea876ab55"
     });
 
-    $http.get(ghost.url.api('posts', {limit: 3}))
+    $http.get(ghost.url.api('posts', {limit: 5}))
         .then(function(response) {
-            console.log(response);
-    });
+            vm.posts = response.data.posts;
+        });
 }
